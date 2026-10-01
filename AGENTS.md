@@ -26,7 +26,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Task and Git workflow
 
 - Run all Git and GitHub commands inside `bytespace-dointech/`; never run them in the parent static-source repository.
-- Execute one numbered task at a time. From clean, updated `origin/main`, create a fresh `codex/bytespace-task-NN-<short-slug>` branch, following the branch naming required by `../AGENTS.md`.
+- Execute one numbered task at a time. From clean, updated `origin/main`, create a fresh `bytespace-<short-slug>` branch. Per the user's naming instruction, branch names must never contain `codex` or `task`; this overrides the conflicting branch pattern in `../AGENTS.md`.
 - Run each task's required checks and `git diff --check`, commit only its scoped changes with `port(NN): ...`, push with `git push`, and open a PR against `main` using `gh pr create`. Update these instructions when a task changes structure, tooling, or behavior.
 - Stop after opening the PR. The user must merge it; verify the previous PR is merged with `gh pr view` and fast-forward local `main` to updated `origin/main` before starting the next task. Do not merge PRs or push directly to `main`.
 - Foundation tasks 01–04 each require their own merged PR before page or component work begins. Follow the numbered task checks; the template provides `npm run build` and `npm run lint`, and TypeScript can be checked with `npx tsc --noEmit` after route types are generated.
