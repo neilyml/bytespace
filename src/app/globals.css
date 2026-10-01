@@ -17,9 +17,6 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
   --layout-grid-columns: 12;
   --layout-grid-canvas-width: 1440px;
   --layout-grid-margin: 120px;
@@ -114,21 +111,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-heading: var(--font-poppins);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
 }
 
 @layer base {
