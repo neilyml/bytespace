@@ -24,7 +24,7 @@ export default function ProfessionalGrowth() {
   return (
     <section
       id="professional-growth"
-      className="relative h-[1460px] w-full overflow-hidden bg-[#FAFAFA]"
+      className="relative h-[1460px] w-full overflow-hidden bg-[#FAFAFA] [content-visibility:auto]"
       aria-labelledby="professional-growth-title"
     >
       <Canvas>
@@ -68,10 +68,12 @@ export default function ProfessionalGrowth() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="absolute left-[-25px] top-0 h-[540px] w-[757px] max-w-none"
-                src="/assets/person_holding_laptop.png"
+                src="/assets/optimized/person_holding_laptop.webp"
                 alt=""
                 width="722"
                 height="515"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -86,7 +88,7 @@ export default function ProfessionalGrowth() {
 
           <div className="flex h-[596px] w-[1200px] items-center gap-[79px]">
             <div className="relative h-[596px] w-[541px] shrink-0" aria-label="Creator revenue summary">
-              <div className="absolute left-0 top-[44px] flex h-[120px] w-[232px] flex-col items-start gap-[8px] rounded-[16px] bg-[var(--color-primary-800)] p-[16px] text-[var(--color-neutral-50)] backdrop-blur-[10px]">
+              <div className="absolute left-0 top-[44px] flex h-[120px] w-[232px] flex-col items-start gap-[8px] rounded-[16px] bg-[var(--color-primary-800)] p-[16px] text-[var(--color-neutral-50)]">
                 <div className="flex flex-col items-start">
                   <p className="font-body text-label-m">Total Revenue</p>
                   <p className="font-body text-[10px] leading-[12px]">July 1-28</p>
@@ -100,7 +102,7 @@ export default function ProfessionalGrowth() {
                 </div>
               </div>
 
-              <div className="absolute left-0 top-[194px] flex h-[136px] w-[134px] flex-col items-start gap-[8px] rounded-[16px] bg-[var(--color-primary-800)] p-[16px] text-[var(--color-neutral-50)] backdrop-blur-[10px]">
+              <div className="absolute left-0 top-[194px] flex h-[136px] w-[134px] flex-col items-start gap-[8px] rounded-[16px] bg-[var(--color-primary-800)] p-[16px] text-[var(--color-neutral-50)]">
                 <div className="flex flex-col items-start">
                   <p className="whitespace-nowrap font-body text-label-m">Year to Date</p>
                   <p className="font-body text-[10px] leading-[12px]">2023</p>
@@ -114,15 +116,17 @@ export default function ProfessionalGrowth() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="absolute left-1/2 top-0 h-[744px] w-[579px] max-w-none -translate-x-1/2"
-                  src="/assets/lady_holding_laptop.png"
+                  src="/assets/optimized/lady_holding_laptop.webp"
                   alt=""
                   width="579"
                   height="744"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <aside
-                className="absolute left-[283px] top-[413px] h-[115px] w-[258px] rounded-[16px] bg-white p-[16px] backdrop-blur-[10px]"
+                className="absolute left-[283px] top-[413px] h-[115px] w-[258px] rounded-[16px] bg-white p-[16px]"
                 aria-label="Happy students"
               >
                 <div className="flex h-[40px] flex-col items-start">
@@ -146,7 +150,7 @@ export default function ProfessionalGrowth() {
                   <li key={benefit} className="flex items-end gap-[8px]">
                     {/* Preserve the source check asset and dimensions. */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img className="h-[24px] w-[24px]" src="/assets/blue-check.svg" alt="" width="24" height="24" />
+                    <img className="h-[24px] w-[24px]" src="/assets/blue-check.svg" alt="" width="24" height="24" loading="lazy" />
                     <span className="font-body text-label-l text-[var(--color-neutral-950)]">{benefit}</span>
                   </li>
                 ))}

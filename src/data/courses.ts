@@ -6,7 +6,6 @@ export type Course = {
   readonly creator: string;
   readonly image: {
     readonly src: string;
-    readonly avifSrc?: string;
     readonly alt: "";
     readonly width: number;
     readonly height: number;
@@ -51,11 +50,10 @@ export const catalogCourses = [
     id: "learn-figma",
     title: "Learn Figma from Basic",
     image: {
-      src: "/assets/course-catalog/cata-1.jpg",
-      avifSrc: "/assets/course-catalog/cata-1.avif",
+      src: "/assets/optimized/course-catalog/cata-1.webp",
       alt: "",
-      width: 4366,
-      height: 2910,
+      width: 682,
+      height: 455,
     },
     students: studentPhotoLists.catalog[0],
   },
@@ -64,11 +62,10 @@ export const catalogCourses = [
     id: "digital-asset",
     title: "Build Digital Asset",
     image: {
-      src: "/assets/course-catalog/cata-2.jpg",
-      avifSrc: "/assets/course-catalog/cata-2.avif",
+      src: "/assets/optimized/course-catalog/cata-2.webp",
       alt: "",
-      width: 6000,
-      height: 4000,
+      width: 682,
+      height: 455,
     },
     students: studentPhotoLists.catalog[1],
   },
@@ -77,10 +74,10 @@ export const catalogCourses = [
     id: "big-data",
     title: "the Power of Big Data",
     image: {
-      src: "/assets/course-catalog/cata-3.jpg",
+      src: "/assets/optimized/course-catalog/cata-3.webp",
       alt: "",
-      width: 4810,
-      height: 3207,
+      width: 682,
+      height: 455,
     },
     students: studentPhotoLists.catalog[2],
   },
@@ -89,10 +86,10 @@ export const catalogCourses = [
     id: "productivity-self-care",
     title: "Balancing Productivity and Self-Care",
     image: {
-      src: "/assets/course-catalog/cata-4.jpg",
+      src: "/assets/optimized/course-catalog/cata-4.webp",
       alt: "",
-      width: 5760,
-      height: 3840,
+      width: 682,
+      height: 455,
     },
     students: studentPhotoLists.catalog[3],
   },
@@ -101,10 +98,10 @@ export const catalogCourses = [
     id: "money-management",
     title: "Mastering Money Management",
     image: {
-      src: "/assets/course-catalog/cata-5.jpg",
+      src: "/assets/optimized/course-catalog/cata-5.webp",
       alt: "",
-      width: 3999,
-      height: 2666,
+      width: 682,
+      height: 455,
     },
     students: studentPhotoLists.catalog[4],
   },
@@ -113,10 +110,10 @@ export const catalogCourses = [
     id: "startup-success",
     title: "From Idea to Startup Success",
     image: {
-      src: "/assets/course-catalog/cata-6.jpg",
+      src: "/assets/optimized/course-catalog/cata-6.webp",
       alt: "",
-      width: 3800,
-      height: 2138,
+      width: 695,
+      height: 391,
     },
     students: studentPhotoLists.catalog[5],
   },

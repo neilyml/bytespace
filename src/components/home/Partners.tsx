@@ -10,13 +10,13 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section id="logo-partners" className="relative h-[202px] w-full bg-[var(--color-neutral-50)]" aria-label="Partner logos">
+    <section id="logo-partners" className="relative h-[202px] w-full bg-[var(--color-neutral-50)] [content-visibility:auto]" aria-label="Partner logos">
       <Canvas>
         <div className="absolute left-[154px] top-[80px] flex h-[42px] w-[1132px] items-end justify-between">
           {partners.map((partner) => (
             // Preserve the supplied SVG's intrinsic dimensions.
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={partner.number} className={partner.number === 5 ? "h-[42px] w-[169px]" : undefined} src={`/assets/logo-partners/${partner.number}.svg`} alt={`Partner logo ${partner.number}`} width={partner.width} height={partner.height} />
+            <img key={partner.number} className={partner.number === 5 ? "h-[42px] w-[169px]" : undefined} src={`/assets/logo-partners/${partner.number}.svg`} alt={`Partner logo ${partner.number}`} loading="lazy" width={partner.width} height={partner.height} />
           ))}
         </div>
       </Canvas>

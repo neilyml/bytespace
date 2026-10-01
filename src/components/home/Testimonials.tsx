@@ -15,7 +15,7 @@ const nameTypography = {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative h-[784px] w-full overflow-hidden bg-[#FAFAFA]" aria-labelledby="testimonials-title">
+    <section id="testimonials" className="relative h-[784px] w-full overflow-hidden bg-[#FAFAFA] [content-visibility:auto]" aria-labelledby="testimonials-title">
       <Canvas>
         <div className="testimonial-glow testimonial-glow-lime-large absolute left-[842px] top-[-241px] h-[1137px] w-[1137px] rounded-full" />
         <div className="testimonial-glow testimonial-glow-lime-small absolute left-[395px] top-[-138px] h-[672px] w-[672px] rounded-full" />
@@ -36,7 +36,7 @@ export default function Testimonials() {
               <article key={testimonial.id} className={`flex ${cardHeights[testimonial.id]} w-[374px] shrink-0 flex-col items-start gap-[24px] rounded-[24px] bg-white p-[24px]`}>
                 {/* Preserve the source's centered 80px portrait crop. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="h-[80px] w-[80px] shrink-0 rounded-full object-cover object-center" src={testimonial.portraitSrc} alt="" width="80" height="80" />
+                <img className="h-[80px] w-[80px] shrink-0 rounded-full object-cover object-center" src={testimonial.portraitSrc} alt="" width="80" height="80" loading="lazy" decoding="async" />
                 <div className="flex flex-col items-start">
                   <h3 className={`font-heading ${nameTypography[testimonial.id]} tracking-[-0.01em] text-black`}>{testimonial.name}</h3>
                   <p className="font-body text-body-l text-[var(--color-primary-800)]">{testimonial.role}</p>
