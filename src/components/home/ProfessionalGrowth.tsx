@@ -60,22 +60,18 @@ export default function ProfessionalGrowth() {
               <CourseCard course={professionalGrowthCourse} variant="catalog" headingLevel="h3" ariaLabel="Learn Figma from Basic course" />
             </div>
 
-            <div
-              className="person-holding-laptop absolute left-[637px] top-[12px] h-[540px] w-[577px] overflow-visible"
+            {/* The 577x540 portrait frame and its overflow, with the source shadows baked in. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="absolute left-[683px] top-[49px] h-[679px] w-[701px] max-w-none"
+              src="/assets/optimized/growth-portrait.webp"
+              alt=""
+              width="701"
+              height="679"
+              loading="lazy"
+              decoding="async"
               aria-hidden="true"
-            >
-              {/* Preserve transparent portrait sizing and visible overflow. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="absolute left-[-25px] top-0 h-[540px] w-[757px] max-w-none"
-                src="/assets/optimized/person_holding_laptop.webp"
-                alt=""
-                width="722"
-                height="515"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+            />
 
             <div className="absolute left-[982px] top-[213px]">
               <LearningProgressCard variant="growth" />
@@ -111,19 +107,18 @@ export default function ProfessionalGrowth() {
                 <span className="flex items-center justify-center rounded-[24px] bg-[var(--color-secondary-500)] px-[8px] py-[2px] font-body text-[10px] font-medium leading-[20px] text-[var(--color-neutral-950)]">+12$</span>
               </div>
 
-              <div className="person-holding-laptop absolute left-[83px] top-[8px] h-[744px] w-[435px]" aria-hidden="true">
-                {/* Preserve transparent portrait sizing and visible overflow. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  className="absolute left-1/2 top-0 h-[744px] w-[579px] max-w-none -translate-x-1/2"
-                  src="/assets/optimized/lady_holding_laptop.webp"
-                  alt=""
-                  width="579"
-                  height="744"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+              {/* The 435x744 portrait frame and its overflow, with the source shadows baked in. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="absolute left-[47px] top-[43px] h-[776px] w-[567px] max-w-none"
+                src="/assets/optimized/lady-portrait.webp"
+                alt=""
+                width="567"
+                height="776"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
 
               <aside
                 className="absolute left-[283px] top-[413px] h-[115px] w-[258px] rounded-[16px] bg-white p-[16px]"
