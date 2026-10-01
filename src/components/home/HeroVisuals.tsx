@@ -6,18 +6,16 @@ import { studentPhotoLists } from "@/data/student-photos";
 export default function HeroVisuals() {
   return (
     <>
-      <div className="person-holding-laptop absolute left-[431px] top-[512px] h-[541px] w-[578px] overflow-hidden">
-        {/* Keep the original portrait dimensions and clipping frame. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="absolute left-[-56px] top-0 h-[577px] w-[809px] max-w-none"
-          src="/assets/optimized/person_holding_laptop.webp"
-          alt="Person wearing a headset and holding a laptop"
-          width="722"
-          height="515"
-          fetchPriority="high"
-        />
-      </div>
+      {/* The clipped 578x541 portrait frame with its source shadows baked in. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className="absolute left-[453px] top-[552px] h-[680px] w-[690px] max-w-none"
+        src="/assets/optimized/hero-portrait.webp"
+        alt="Person wearing a headset and holding a laptop"
+        width="690"
+        height="680"
+        fetchPriority="high"
+      />
 
       <div className="absolute left-[842px] top-[651px]">
         <LearningProgressCard variant="hero" />
