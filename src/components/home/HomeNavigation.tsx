@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BrandLogo from "@/components/shared/BrandLogo";
 
 export default function HomeNavigation() {
@@ -20,7 +21,7 @@ export default function HomeNavigation() {
         className="absolute right-[var(--layout-grid-margin)] top-[48px] flex items-start justify-end gap-[24px]"
         aria-label="Account navigation"
       >
-        <a className="whitespace-nowrap font-body text-label-m text-[var(--color-neutral-50)]" href="#">Sign In</a>
+        <Link className="whitespace-nowrap font-body text-label-m text-[var(--color-neutral-50)]" href="/login">Sign In</Link>
         <a className="whitespace-nowrap font-body text-label-m text-[var(--color-neutral-50)]" href="#">Join Us</a>
         <a className="relative h-[24px] w-[24px] shrink-0 overflow-hidden" href="#" aria-label="Shopping bag">
           <svg
