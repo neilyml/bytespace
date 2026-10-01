@@ -1,0 +1,3 @@
+# Preserve whitespace in the unchanged upstream Satoshi package.
+public/assets/satoshi-complete/Fonts/WEB/README.md -whitespace
+public/assets/satoshi-complete/Fonts/WEB/css/satoshi.css -whitespace
