@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-// Display-sized lossless copies of the source PNGs, from scripts/optimize-images.sh.
+// Display-sized lossless WebP copies of the source PNGs.
 const sources = {
   spiral: { src: "/assets/optimized/card-section/spiral.webp", size: 774 },
   "spiral-small": { src: "/assets/optimized/card-section/spiral-small.webp", size: 664 },
