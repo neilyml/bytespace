@@ -3,7 +3,7 @@ import BrandLogo from "@/components/shared/BrandLogo";
 export default function Footer() {
   return (
     <footer
-      className="relative h-[525px] w-full overflow-hidden bg-white"
+      className="relative h-[525px] w-full overflow-hidden bg-white [content-visibility:auto]"
       aria-label="ByteSpace footer"
     >
       <div className="absolute left-1/2 top-[1px] h-px w-[1440px] -translate-x-1/2 bg-[var(--color-neutral-200)]"></div>

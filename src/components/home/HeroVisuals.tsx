@@ -11,10 +11,11 @@ export default function HeroVisuals() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="absolute left-[-56px] top-0 h-[577px] w-[809px] max-w-none"
-          src="/assets/person_holding_laptop.png"
+          src="/assets/optimized/person_holding_laptop.webp"
           alt="Person wearing a headset and holding a laptop"
           width="722"
           height="515"
+          fetchPriority="high"
         />
       </div>
 
@@ -23,7 +24,7 @@ export default function HeroVisuals() {
       </div>
 
       <aside
-        className="absolute left-[404px] top-[639px] flex h-[72px] w-[216px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-white p-[16px] antialiased backdrop-blur-[10px] [font-synthesis:none]"
+        className="absolute left-[404px] top-[639px] flex h-[72px] w-[216px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-white p-[16px] antialiased [font-synthesis:none]"
         aria-label="UI/UX Design course category"
       >
         <div className="flex flex-col items-start">
@@ -39,7 +40,7 @@ export default function HeroVisuals() {
       </aside>
 
       <aside
-        className="absolute left-[328px] top-[837px] flex h-[143px] w-[258px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-white p-[16px] antialiased backdrop-blur-[10px] [font-synthesis:none]"
+        className="absolute left-[328px] top-[837px] flex h-[143px] w-[258px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-white p-[16px] antialiased [font-synthesis:none]"
         aria-label="Happy students"
       >
         <div className="flex flex-col items-start">

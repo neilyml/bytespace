@@ -39,9 +39,9 @@ export default function CourseCard({
       <p className="font-body text-body-xs text-[#4F4F4F]">{course.creator}</p>
     </>
   );
-  // Keep the supplied image fill, crop, and AVIF fallback unchanged.
+  // Keep the source image fill and crop; auth cards render above the fold.
   // eslint-disable-next-line @next/next/no-img-element
-  const image = <img className="h-full w-full object-cover object-center" src={course.image.src} alt={course.image.alt} width={course.image.width} height={course.image.height} />;
+  const image = <img className="h-full w-full object-cover object-center" src={course.image.src} alt={course.image.alt} width={course.image.width} height={course.image.height} loading={isAuth ? "eager" : "lazy"} decoding="async" />;
 
   return (
     <article
@@ -50,12 +50,7 @@ export default function CourseCard({
       aria-label={ariaLabel}
     >
       <div className={`absolute left-[15px] top-[15px] h-[195.14px] w-[341px] overflow-hidden rounded-[12px] ${isAuth ? "bg-[#443131]" : ""}`}>
-        {course.image.avifSrc ? (
-          <picture>
-            <source srcSet={course.image.avifSrc} type="image/avif" />
-            {image}
-          </picture>
-        ) : image}
+        {image}
         <div className={`absolute ${isAuth ? "left-[12px]" : "left-[13px]"} top-[150px] flex items-start gap-[12px]`}>
           {[course.badges.lessons, course.badges.duration, course.badges.comments].map((badge) => (
             <span key={badge} className={`rounded-[24px] bg-[#F6F6F699] px-[12px] py-[6px] font-body text-label-xs ${isAuth ? "leading-[20px]" : ""} text-[#4F4F4F] backdrop-blur-[4px]`}>

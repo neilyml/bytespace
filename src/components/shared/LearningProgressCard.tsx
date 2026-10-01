@@ -10,7 +10,7 @@ const heights = {
 export default function LearningProgressCard({ variant }: LearningProgressCardProps) {
   return (
     <aside
-      className={`flex ${heights[variant]} w-[232px] flex-col items-start gap-[8px] rounded-[16px] bg-white p-[16px] antialiased backdrop-blur-[10px] [font-synthesis:none]`}
+      className={`flex ${heights[variant]} w-[232px] flex-col items-start gap-[8px] rounded-[16px] bg-white p-[16px] antialiased [font-synthesis:none]`}
       aria-label="Learning progress"
     >
       <p className="font-body text-label-s text-[var(--color-neutral-950)]">

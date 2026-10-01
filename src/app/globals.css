@@ -134,6 +134,8 @@
     drop-shadow(5.38px 7.69px 4.79px #00000012)
     drop-shadow(2.23px 3.19px 2.86px #0000000f)
     drop-shadow(0.52px 0.74px 1.52px #0000000a);
+  /* Rasterize the shadow stack once on its own layer instead of during scroll repaints. */
+  will-change: transform;
 }
 
 .card-section-decoration {
@@ -157,8 +159,8 @@
 }
 
 .testimonial-glow {
+  /* The radial gradients already fade to transparent, so no blur filter is needed. */
   pointer-events: none;
-  filter: blur(20px);
 }
 
 .testimonial-glow-lime-large {

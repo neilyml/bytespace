@@ -1,12 +1,13 @@
 import type { CSSProperties } from "react";
 
+// Display-sized lossless copies of the source PNGs, from scripts/optimize-images.sh.
 const sources = {
-  spiral: "/assets/card-section/spiral.png",
-  "spiral-small": "/assets/card-section/spiral-small.png",
-  donut: "/assets/card-section/donut.png",
-  cylinder: "/assets/card-section/cylinder.png",
-  cone: "/assets/card-section/cone.png",
-  "cone-white": "/assets/card-section/cone-white-source.png",
+  spiral: { src: "/assets/optimized/card-section/spiral.webp", size: 774 },
+  "spiral-small": { src: "/assets/optimized/card-section/spiral-small.webp", size: 664 },
+  donut: { src: "/assets/optimized/card-section/donut.webp", size: 688 },
+  cylinder: { src: "/assets/optimized/card-section/cylinder.webp", size: 744 },
+  cone: { src: "/assets/optimized/card-section/cone.webp", size: 378 },
+  "cone-white": { src: "/assets/optimized/card-section/cone-white-source.webp", size: 378 },
 };
 
 const presets = {
@@ -92,7 +93,7 @@ type OrnamentStyle = CSSProperties & {
 };
 
 export default function Ornament({ source, tint, preset }: OrnamentProps) {
-  const asset = sources[source];
+  const { src: asset, size } = sources[source];
   const geometry = presets[preset];
   const style: OrnamentStyle = {
     "--decoration-mask-image": `url('${asset}')`,
@@ -111,8 +112,9 @@ export default function Ornament({ source, tint, preset }: OrnamentProps) {
         className={`absolute object-cover ${geometry.image}`}
         src={asset}
         alt=""
-        width="2500"
-        height="2500"
+        width={size}
+        height={size}
+        decoding="async"
       />
       <span className={`card-section-decoration-mask ${geometry.tint}`} />
     </div>

@@ -7,7 +7,7 @@ export default function CreatorCTA() {
   return (
     <section
       id="creator-cta"
-      className="relative h-[488px] w-full overflow-hidden bg-[var(--color-primary-800)]"
+      className="relative h-[488px] w-full overflow-hidden bg-[var(--color-primary-800)] [content-visibility:auto]"
       aria-labelledby="creator-cta-title"
     >
       <svg

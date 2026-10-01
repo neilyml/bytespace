@@ -4,13 +4,13 @@ export type StudentPhoto = {
 };
 
 const photos = [
-  { src: "/assets/happy-students/happy-student-1.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-2.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-3.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-4.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-5.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-6.png", alt: "" },
-  { src: "/assets/happy-students/happy-student-7.png", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-1.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-2.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-3.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-4.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-5.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-6.webp", alt: "" },
+  { src: "/assets/optimized/happy-students/happy-student-7.webp", alt: "" },
 ] as const satisfies readonly StudentPhoto[];
 
 const catalogPhotos = [

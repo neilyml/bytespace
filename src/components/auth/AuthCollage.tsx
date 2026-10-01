@@ -20,7 +20,7 @@ export default function AuthCollage({ variant }: AuthCollageProps) {
         <CourseCard course={authCourses[1]} variant="auth" titleId={`${titlePrefix}big-data-course-title`} />
       </div>
       <aside
-        className="absolute left-[348px] top-[740px] flex h-[123px] w-[258px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-[var(--color-secondary-400)] p-[16px] backdrop-blur-[10px]"
+        className="absolute left-[348px] top-[740px] flex h-[123px] w-[258px] flex-col items-start justify-center gap-[8px] rounded-[16px] bg-[var(--color-secondary-400)] p-[16px]"
         aria-label="Happy students"
       >
         <div className="flex flex-col items-start">

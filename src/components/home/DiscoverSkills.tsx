@@ -15,7 +15,7 @@ const pillTones = {
 
 export default function DiscoverSkills() {
   return (
-    <section id="discover-your-skills" className="relative h-[466px] w-full bg-white" aria-labelledby="discover-your-skills-title">
+    <section id="discover-your-skills" className="relative h-[466px] w-full bg-white [content-visibility:auto]" aria-labelledby="discover-your-skills-title">
       <Canvas>
         <div className="absolute left-[261px] top-[72px] flex w-[917px] flex-col items-center gap-[16px]">
           <h2 id="discover-your-skills-title" className="flex w-[588px] flex-wrap justify-center text-center font-heading text-heading-m tracking-[-0.01em] text-[#040819]">

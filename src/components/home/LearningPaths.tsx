@@ -9,7 +9,7 @@ const iconAlignments = {
 
 export default function LearningPaths() {
   return (
-    <section id="diverse-learning-paths" className="relative h-[544px] w-full bg-white" aria-labelledby="diverse-learning-paths-title">
+    <section id="diverse-learning-paths" className="relative h-[544px] w-full bg-white [content-visibility:auto]" aria-labelledby="diverse-learning-paths-title">
       <Canvas>
         <div className="absolute left-[261px] top-[72px] flex w-[917px] flex-col items-center gap-[16px]">
           <h2 id="diverse-learning-paths-title" className="whitespace-nowrap text-center font-heading text-heading-s tracking-[-0.01em] text-[#040819]">
@@ -25,7 +25,7 @@ export default function LearningPaths() {
               <div className={`absolute ${iconAlignments[path.alignment]} flex -translate-x-1/2 flex-col items-center gap-[12px]`}>
                 {/* Keep the supplied category SVG dimensions. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="h-[60px] w-[60px]" src={path.iconSrc} alt="" width="60" height="60" />
+                <img className="h-[60px] w-[60px]" src={path.iconSrc} alt="" width="60" height="60" loading="lazy" />
                 <span className="whitespace-nowrap font-body text-[20px] font-medium leading-[120%] text-[var(--color-neutral-950)]">{path.label}</span>
               </div>
             </li>

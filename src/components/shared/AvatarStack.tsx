@@ -17,6 +17,7 @@ export default function AvatarStack({ photos, variant }: AvatarStackProps) {
   const isCourse = variant === "course" || variant === "auth-course";
   const Wrapper = isCourse ? "span" : "div";
   const StudentBadge = variant === "hero" ? "div" : "span";
+  const loading = variant === "course" || variant === "growth" ? "lazy" : "eager";
 
   return (
     <Wrapper
@@ -33,6 +34,8 @@ export default function AvatarStack({ photos, variant }: AvatarStackProps) {
           alt={photo.alt}
           width={isCourse ? 32 : 43}
           height={isCourse ? 32 : 43}
+          loading={loading}
+          decoding="async"
         />
       ))}
       {isCourse ? (
