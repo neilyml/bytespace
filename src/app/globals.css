@@ -3,6 +3,58 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --layout-grid-columns: 12;
+  --layout-grid-canvas-width: 1440px;
+  --layout-grid-margin: 120px;
+  --layout-grid-gutter: 40px;
+  --layout-grid-content-width: 1200px;
+
+  --size-grid-step: 120px;
+  --size-page-hero-height: 1024px;
+  --size-course-card-width: 373px;
+  --size-course-card-height: 384px;
+  --size-auth-panel-width: 579px;
+  --size-auth-panel-height: 784px;
+  --size-progress-track-width: 200px;
+  --size-progress-track-height: 8px;
+  --size-progress-fill-width: 112px;
+}
+
+@theme static {
+  --color-neutral-50: #f5f5f6;
+  --color-neutral-100: #e5e6e8;
+  --color-neutral-200: #ced0d3;
+  --color-neutral-300: #abaeb5;
+  --color-neutral-400: #82868e;
+  --color-neutral-500: #666973;
+  --color-neutral-600: #585a62;
+  --color-neutral-700: #4b4c53;
+  --color-neutral-800: #424348;
+  --color-neutral-900: #3a3b3f;
+  --color-neutral-950: #242528;
+  --color-primary-50: #e7f6ff;
+  --color-primary-100: #d3eeff;
+  --color-primary-200: #b0ddff;
+  --color-primary-300: #81c5ff;
+  --color-primary-400: #4f9fff;
+  --color-primary-500: #2872ff;
+  --color-primary-600: #0445ff;
+  --color-primary-700: #0043ff;
+  --color-primary-800: #003be2;
+  --color-primary-900: #0b36a4;
+  --color-primary-950: #071e5f;
+  --color-secondary-50: #fffde4;
+  --color-secondary-100: #faffc5;
+  --color-secondary-200: #f2ff92;
+  --color-secondary-300: #e4ff54;
+  --color-secondary-400: #d4fb20;
+  --color-secondary-500: #cbfc01;
+  --color-secondary-600: #8cb400;
+  --color-secondary-700: #6a8902;
+  --color-secondary-800: #546b09;
+  --color-secondary-900: #465a0d;
+  --color-secondary-950: #243300;
 }
 
 @theme inline {
@@ -23,4 +75,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
