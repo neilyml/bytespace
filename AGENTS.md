@@ -13,7 +13,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Confirmed template baseline
 
 - This repository is the initialized Next.js 16.3.8 App Router project, with React 19.2.8, TypeScript 5, Tailwind CSS v4, and npm (`package-lock.json`). Preserve the existing dependencies, lockfile, and scripts; do not scaffold or install another stack.
-- Routes and the root layout live in `src/app/`. `src/app/layout.tsx` imports `src/app/globals.css`, which uses the compiled Tailwind v4 pipeline. The starter UI and Geist font setup remain the task 01 baseline.
+- Routes and the root layout live in `src/app/`. `src/app/layout.tsx` imports `src/app/globals.css`, which uses the compiled Tailwind v4 pipeline. The starter page remains until its migration task.
+- The root layout loads Poppins weights 300–700 through `next/font/google` and applies `font-body` globally. `src/app/globals.css` loads the unchanged Satoshi regular/italic variable WOFF2 files with weights 300–900 and `font-display: swap`. Use `font-heading` for Poppins, `font-body` or `font-sans` for Satoshi, and the 12 `text-heading-*`, `text-body-*`, and `text-label-*` roles from the global theme. Type roles define size, line height, and weight; pair them with the appropriate font utility.
 - `src/app/globals.css` exposes the exact ByteSpace neutral, primary, and secondary palettes through Tailwind v4 `@theme static`. Shared `--layout-grid-*` and `--size-*` variables live in `:root`; consume them with utilities such as `w-[var(--size-course-card-width)]`. The universal reset is in `@layer base` so utilities can override it. Keep these definitions global and authoritative.
 - Read the relevant installed guides in `node_modules/next/dist/docs/` before changing Next.js code. Preserve the generated rules above.
 
@@ -33,3 +34,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Use conventional commit PR titles and short, natural descriptions covering the change and checks. Do not mention agents, AI, or generated content in PR titles or descriptions.
 - Stop after opening the PR. The user must merge it; when the user says the PR is merged, rely on that confirmation, switch to `main`, run `git pull --ff-only origin main`, and create the next branch. Do not run `gh pr view` to recheck their confirmation. Do not merge PRs or push directly to `main`.
 - Foundation tasks 01–04 each require their own merged PR before page or component work begins. Follow the numbered task checks; the template provides `npm run build` and `npm run lint`, and TypeScript can be checked with `npx tsc --noEmit` after route types are generated.
+- Per the user's testing preference, do not start the app or open a browser for checks. Run compilation and static checks, then report the implementation for the user to test rendering and behavior.
